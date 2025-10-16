@@ -1,6 +1,7 @@
 import "./globals.css";
 
 import Logo from "./components/Logo";
+import Link from "next/link";
 
 
 
@@ -17,9 +18,22 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <header className="flex items-center justify-between px-6 py-4 bg-[#ffffff] shadow-8xl">
           <Logo />
           <nav className="space-x-6">
-            <a href="/" className="text-[#6B9080] hover:underline">Privacidad</a>
-            <a href="/deleteaccount" className="text-[#6B9080] hover:underline">Eliminar cuenta</a>
-            <a href="/deletedata" className="text-[#6B9080] hover:underline">Eliminar datos</a>
+    
+
+<Link href="/privacy" className="text-white hover:underline">
+  Politicas de privacidad
+</Link>
+
+<Link href="/deleteaccount" className="text-white hover:underline">
+  Eliminar cuenta
+</Link>
+
+        
+
+<Link href="/deletedata" className="text-white hover:underline">
+  Eliminar datos
+</Link>
+
           </nav>
         </header>
         <main>{children}</main>
